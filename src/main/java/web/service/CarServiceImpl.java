@@ -1,16 +1,18 @@
 package web.service;
 
+import org.springframework.stereotype.Component;
 import web.model.Car;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class CarServiceImpl {
+@Component
+public class CarServiceImpl implements CarService {
 
-    static public List<Car> cars;
+    private List<Car> cars;
 
-    static {
+     {
         cars = new ArrayList<>();
 
         cars.add(new Car((long) 1,"Nissan Murano", 2014));
@@ -20,7 +22,11 @@ public class CarServiceImpl {
         cars.add(new Car((long) 5,"Reno Logan", 2010));
     }
 
-    static public List<Car> listCars(int count) {
+    public List<Car> listCars(int count) {
         return cars.stream().limit(count).collect(Collectors.toList());
+    }
+
+    public List<Car> getCars() {
+        return cars;
     }
 }
