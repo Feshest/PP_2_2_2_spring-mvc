@@ -12,7 +12,7 @@
         <th>Model</th>
         <th>Series</th>
     </tr>
-    <th:block th:each="car : ${messages}">
+    <th:block th:each="car : ${cars}">
         <tr>
             <td th:text="${car.id}"></td>
             <td th:text="${car.model}"></td>
