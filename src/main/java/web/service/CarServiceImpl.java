@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Component
+@Component("carBean")
 public class CarServiceImpl implements CarService {
 
     private List<Car> cars;
