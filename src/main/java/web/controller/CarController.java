@@ -19,7 +19,7 @@ public class CarController {
     private final CarService carService;
 
     @Autowired
-    public CarController(@Qualifier("carBean") CarService carService) {
+    public CarController(CarService carService) {
         this.carService = carService;
     }
 
